@@ -13,10 +13,16 @@
       voluptatibus dolorum, possimus cum doloribus nisi ad accusamus blanditiis
       animi molestias at aliquid!
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch('/api/owlie?name=Sophie', {
+  method: 'post',
+  body: { age: 30 },
+})
+</script>
 
 <style scoped>
 h2 {
