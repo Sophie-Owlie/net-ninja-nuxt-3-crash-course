@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Head>
+      <Title>Owlie Nuxt | {{ product.title }}</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
+
     <ProductDetails :product="product" />
   </div>
 </template>

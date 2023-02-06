@@ -15,6 +15,12 @@ definePageMeta({
 
 // Fetch the products
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
+
+// Overwrite default meta
+useHead({
+  title: 'Owlie Nuxt | Merch',
+  meta: [{ name: 'description', content: 'All of Nuxt 3 Merch' }],
+})
 </script>
 
 <style scoped></style>
